@@ -30,7 +30,7 @@ def capture_image(file_path):
         gray_frame_colored = cv2.cvtColor(gray_frame, cv2.COLOR_GRAY2BGR)
         
         # Blend the grayscale frame with the original frame for partial desaturation
-        desaturated_frame = cv2.addWeighted(blurred_frame, 0.9, gray_frame_colored, 0.1, 0)
+        desaturated_frame = cv2.addWeighted(blurred_frame, 0.99, gray_frame_colored, 0.01, 0)
         
         # Save the processed image
         cv2.imwrite(file_path, desaturated_frame)
