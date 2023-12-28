@@ -21,7 +21,7 @@ def capture_image(file_path):
     
     if ret:
         # Apply a very strong Gaussian blur to the frame
-        blurred_frame = cv2.GaussianBlur(frame, (201, 201), 0)
+        blurred_frame = cv2.GaussianBlur(frame, (101, 101), 0)
         
         # Convert the blurred frame to grayscale
         gray_frame = cv2.cvtColor(blurred_frame, cv2.COLOR_BGR2GRAY)
